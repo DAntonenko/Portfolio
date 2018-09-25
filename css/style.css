@@ -1,0 +1,181 @@
+/* service */
+
+.visually-hidden {
+	position: absolute;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0;
+	border:0;
+	height: 1px; 
+	width: 1px; 
+	overflow: hidden;
+}
+
+/* forced inheritance box-sizing: border-box for flex-elements */
+
+html {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+* {
+	-webkit-box-sizing: inherit;
+	        box-sizing: inherit;
+}
+
+.content-box-component {
+	-webkit-box-sizing: content-box;
+	        box-sizing: content-box;
+}
+
+/* general */
+
+body {
+	margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: grey;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+/* index-page */
+
+.index-main {
+	display: flex;
+	align-items: stretch;
+}
+
+.main-content {
+	display: flex;
+	padding: 1rem;
+}
+
+.main-content a {
+	border-bottom: solid #B8B8B8 0.1rem;
+}
+
+.main-content a:hover {
+	border-color: #000;
+}
+
+.side-column {
+	display: block;
+	position: relative;
+	width: 10rem;
+	height: 100vh;
+}
+
+nav.side-menu {
+	display: none;
+}
+
+.about_me {
+	position: relative;
+	width: 55vw;
+	margin-right: 1rem;
+	background-image: url("../img/Portrait_monochrome.jpg");
+	background-size: 100% auto;
+	background-color: black;
+	background-position: 0 -40%;
+	background-repeat: no-repeat;
+}
+
+.about_me p {
+	position: absolute;
+	bottom: 0;
+	padding: 2rem;
+	color: #fff;
+	line-height: 2rem;
+}
+
+.about_me a {
+	border-bottom: solid darkgray 0.1rem;
+}
+
+.about_me a:hover {
+	border-color: #fff;
+}
+
+.greeting {
+	font-size: 1.4rem;
+	line-height: 5rem;
+}
+
+.portfolio {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+}
+
+.project-card {
+	position: relative;
+	margin: 0 1rem 0.5rem 0;
+}
+
+.project-info {
+	position: absolute;
+	top: 60%;
+	left: 10%;
+	color: rgb(72, 72, 72);
+}
+
+/* side navigation-menu */
+
+.hamburger {
+  position: fixed;
+  top: 0.7rem;
+  left: 0.7rem;
+  margin: 0;
+  padding: 0;
+  width: 3rem;
+  height: 3rem;
+  font-size: 0;
+  border-style: none;
+  background-color: inherit;
+  opacity: 0.3;
+}
+
+.hamburger:hover {
+	opacity: 1;
+	cursor: pointer;
+}
+
+.hamburger-line {
+	position: absolute;
+	top: 45%;
+	width: 100%;
+	height: 10%;
+	border-radius: 15%;
+	background-color: #000;
+}
+
+.hamburger-line::before,
+.hamburger-line::after {
+	content: "";
+	display: block;
+	position: absolute;
+  left: 0;
+  width: 100%;
+	height: 100%;
+  border-radius: 15%;
+	background-color: #000;
+}
+
+.hamburger-line::before {
+	top: -300%;
+}
+
+.hamburger-line::after {
+	top: 300%;
+}
