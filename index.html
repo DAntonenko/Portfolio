@@ -11,9 +11,25 @@
   <body>
     <main class="index-main">
 
+    <!-- modal windows -->    
+
+      <nav class="side-menu modal-hide">
+        <li>
+          <ul><a href="#">Профиль в HTML Academy</a></ul>
+          <ul><a href="#">Немного личного</a></ul>
+          <ul><a href="#">English version</a></ul>
+        </li>
+      </nav>
+
+      <div class="curtain modal-hide"></div>
+
+    <!-- permanent content -->
+
       <div class="side-column">
         <button class="hamburger">
-          <div class="hamburger-line"></div>
+          <div class="hamburger-line hamburger-line_upper"></div>
+          <div class="hamburger-line hamburger-line_middle"></div>
+          <div class="hamburger-line hamburger-line_lower"></div>
         </button>
       </div>
 
@@ -29,54 +45,25 @@
         <section class="portfolio">
           <h2 class="visually-hidden">Примеры работ</h2>
 
-          <div class="project-card">
-            <div class="project-info">
-              <h3>Барбершоп «Бородинский»</h3>
-              <a href="#">Репозиторий на GitHub</a>
-            </div>
-            <img src="https://placehold.it/550x350">
+          <div class="project-card" id="barbershop">
+            <div class="background-container"></div>
           </div>
 
-          <div class="project-card">
-            <div class="project-info">
-              <h3>Седона</h3>
-              <a href="#">Репозиторий на GitHub</a>
-            </div>
-            <img src="https://placehold.it/550x350">
+          <div class="project-card" id="sedona">
+            <div class="background-container"></div>
           </div>
 
-          <div class="project-card">
-            <div class="project-info">
-              <h3>ТСЖ «Южное»</h3>
-              <a href="#">Репозиторий на GitHub</a>
-            </div>
-            <img src="https://placehold.it/550x350">
+          <div class="project-card" id="homeowners-association">
+            <div class="background-container"></div>
           </div>
 
-          <div class="project-card">
-            <div class="project-info">
-              <h3>Этот сайт (рекурсия, да)</h3>
-              <a href="#">Репозиторий на GitHub</a>
-            </div>
-            <img src="https://placehold.it/550x350">
+           <div class="project-card" id="homeowners-association">
+            <img src="https://placehold.it/550x377">
           </div>
 
         </section>
       </section>
     </main>
-
-    <!-- modals -->    
-
-    <nav class="side-menu">
-      <li>
-        <ul><a href="#">Профиль в HTML Academy</a></ul>
-        <ul><a href="#">Немного личного</a></ul>
-        <ul><a href="#">English version</a></ul>
-      </li>
-    </nav>
-
-    <div class="curtain"></div>
-
     <script src="js/modals.js"></script>
   </body>
 </html>

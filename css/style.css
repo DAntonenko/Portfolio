@@ -54,11 +54,13 @@ a {
 .index-main {
 	display: flex;
 	align-items: stretch;
+	z-index: 1000;
 }
 
 .main-content {
 	display: flex;
 	padding: 1rem;
+	z-index: 10;
 }
 
 .main-content a {
@@ -72,12 +74,10 @@ a {
 .side-column {
 	display: block;
 	position: relative;
-	width: 10rem;
+	width: 7vw;
 	height: 100vh;
-}
-
-nav.side-menu {
-	display: none;
+	background-color: #fff;
+	z-index: 300;
 }
 
 .about_me {
@@ -109,7 +109,7 @@ nav.side-menu {
 
 .greeting {
 	font-size: 1.4rem;
-	line-height: 5rem;
+	line-height: 4rem;
 }
 
 .portfolio {
@@ -120,14 +120,58 @@ nav.side-menu {
 
 .project-card {
 	position: relative;
-	margin: 0 1rem 0.5rem 0;
+	width: 550px;
+	height: 377px;
+	margin: 0 1rem 1rem 0;
+	overflow: hidden;
 }
 
 .project-info {
 	position: absolute;
 	top: 60%;
 	left: 10%;
+	padding: 1rem;
 	color: rgb(72, 72, 72);
+	background-color: gray;
+}
+
+.project-info h3 {
+	margin: 0;
+	line-height: 2rem;
+}
+
+.background-container {
+	width: inherit;
+	height: inherit;
+	background-size: contain;
+	background-clip: content-box;
+	background-position: center;
+}
+
+.background-container:hover {
+	cursor: pointer;
+	animation-name: scale;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes scale {
+	0% { transform: scale(1); }
+	100% { transform: scale(1.1); }
+}
+
+/* IDs for project-cards */
+
+#barbershop .background-container {
+	background-image: url("../img/barbershop-index-1100x755.jpg");
+}
+
+#sedona .background-container {
+	background-image: url("../img/sedona-index-1100x755.jpg");
+}
+
+#homeowners-association .background-container {
+	background-image: url("../img/HA-index.jpg");
 }
 
 /* side navigation-menu */
@@ -151,31 +195,122 @@ nav.side-menu {
 	cursor: pointer;
 }
 
+.hamburger:focus,
+.hamburger:active {
+	outline: none;
+}
+
+.hamburger::-moz-focus-inner {
+  border: 0;
+}
+
 .hamburger-line {
 	position: absolute;
-	top: 45%;
+	left: 0;
 	width: 100%;
 	height: 10%;
 	border-radius: 15%;
 	background-color: #000;
 }
 
-.hamburger-line::before,
-.hamburger-line::after {
-	content: "";
-	display: block;
+.hamburger-line_upper {
+	top: 15%;
+}
+
+.hamburger-line_middle {
+	top: 45%;
+}
+
+.hamburger-line_lower {
+	top: 75%;
+}
+
+@keyframes elementDown {
+	0% { transform: rotate(0deg); }
+	10% { transform: translateY(0%); }
+	90% { transform: translateY(300%); }
+	100% { transform: rotate(45deg); }
+}
+
+@1keyframes elementRotate {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(-45deg); }
+}
+
+.line-down {
+	animation-name: elementDown;
+	animation-fill-mode: forwards;
+	animation-duration: 1s;
+}
+
+.line-rotate {
+	animation-name: elementRotate;
+	animation-fill-mode: forwards;
+	animation-delay: 1s;
+	animation-duration: 1s;
+}
+
+/* modal windows */
+/*curtain */
+
+.curtain {
 	position: absolute;
-  left: 0;
-  width: 100%;
-	height: 100%;
-  border-radius: 15%;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
 	background-color: #000;
+	opacity: 0.7;
+	z-index: 100;
 }
 
-.hamburger-line::before {
-	top: -300%;
+.modal-hide {
+	left: -100%;
 }
 
-.hamburger-line::after {
-	top: 300%;
+.modal-show {
+	left: 0;
+}
+
+@keyframes curtain-open {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(-100%); }
+}
+
+.curtain-open {
+	animation-name: curtain-open;
+  animation-duration: 0.6s;
+}
+
+@keyframes curtain-close {
+	0% { transform: translateX(-100%); }
+	100% { transform: translateX(0); }
+}
+
+.curtain-close {
+  animation-name: curtain-close;
+  animation-duration: 0.6s;
+}
+
+/* side-menu */
+
+nav.side-menu {
+	position: absolute;
+	width: 34.5vw;
+	height: 100vh;
+	background-color: #fff;
+	z-index: 200;
+}
+
+.side-menu li {
+	margin-left: 6vw;
+	margin-top: 50%;
+	text-transform: uppercase;
+	font-size: 1.7rem;
+	font-weight: bolder;
+	letter-spacing: 0.01rem;
+	word-spacing: 0.3rem;
+}
+
+.side-menu ul:hover {
+	color: #000;
 }
