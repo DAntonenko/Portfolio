@@ -52,15 +52,17 @@ a {
 /* index-page */
 
 .index-main {
-	display: flex;
-	align-items: stretch;
 	z-index: 1000;
 }
 
 .main-content {
 	display: flex;
+	width: auto;
+	margin-left: 5rem;
+	align-items: inherit;
 	padding: 1rem;
 	z-index: 10;
+	background-color: blue;
 }
 
 .main-content a {
@@ -73,21 +75,23 @@ a {
 
 .side-column {
 	display: block;
-	position: relative;
-	width: 7vw;
+	position: fixed;
+	width: 5rem;
 	height: 100vh;
 	background-color: #fff;
 	z-index: 300;
+	background-color: red;
 }
 
 .about_me {
-	position: relative;
-	width: 55vw;
+	position: sticky;
+	width: 1000px;
+	height: 96.5vh;
 	margin-right: 1rem;
-	background-image: url("../img/Portrait_monochrome.jpg");
+	background-image: url("../img/portrait_monochrome.jpg");
 	background-size: 100% auto;
 	background-color: black;
-	background-position: 0 -40%;
+	background-position: 0 -20%;
 	background-repeat: no-repeat;
 }
 
@@ -143,9 +147,11 @@ a {
 .background-container {
 	width: inherit;
 	height: inherit;
-	background-size: contain;
+	background-color: #b3b6b7;
+	background-size: cover;
 	background-clip: content-box;
 	background-position: center;
+	background-repeat: no-repeat;
 }
 
 .background-container:hover {
@@ -174,12 +180,16 @@ a {
 	background-image: url("../img/HA-index.jpg");
 }
 
+#certificate .background-container {
+	background-image: url("../img/certificate.jpg");
+}
+
 /* side navigation-menu */
 
 .hamburger {
   position: fixed;
   top: 0.7rem;
-  left: 0.7rem;
+  left: 1rem;
   margin: 0;
   padding: 0;
   width: 3rem;
