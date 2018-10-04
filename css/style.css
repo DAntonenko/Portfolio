@@ -52,25 +52,8 @@ a {
 /* index-page */
 
 .index-main {
-	z-index: 1000;
-}
-
-.main-content {
 	display: flex;
-	width: auto;
-	margin-left: 5rem;
-	align-items: inherit;
-	padding: 1rem;
-	z-index: 10;
-	background-color: blue;
-}
-
-.main-content a {
-	border-bottom: solid #B8B8B8 0.1rem;
-}
-
-.main-content a:hover {
-	border-color: #000;
+	z-index: 1000;
 }
 
 .side-column {
@@ -80,108 +63,6 @@ a {
 	height: 100vh;
 	background-color: #fff;
 	z-index: 300;
-	background-color: red;
-}
-
-.about_me {
-	position: sticky;
-	width: 1000px;
-	height: 96.5vh;
-	margin-right: 1rem;
-	background-image: url("../img/portrait_monochrome.jpg");
-	background-size: 100% auto;
-	background-color: black;
-	background-position: 0 -20%;
-	background-repeat: no-repeat;
-}
-
-.about_me p {
-	position: absolute;
-	bottom: 0;
-	padding: 2rem;
-	color: #fff;
-	line-height: 2rem;
-}
-
-.about_me a {
-	border-bottom: solid darkgray 0.1rem;
-}
-
-.about_me a:hover {
-	border-color: #fff;
-}
-
-.greeting {
-	font-size: 1.4rem;
-	line-height: 4rem;
-}
-
-.portfolio {
-	display: flex;
-	flex-wrap: wrap;
-	align-content: flex-start;
-}
-
-.project-card {
-	position: relative;
-	width: 550px;
-	height: 377px;
-	margin: 0 1rem 1rem 0;
-	overflow: hidden;
-}
-
-.project-info {
-	position: absolute;
-	top: 60%;
-	left: 10%;
-	padding: 1rem;
-	color: rgb(72, 72, 72);
-	background-color: gray;
-}
-
-.project-info h3 {
-	margin: 0;
-	line-height: 2rem;
-}
-
-.background-container {
-	width: inherit;
-	height: inherit;
-	background-color: #b3b6b7;
-	background-size: cover;
-	background-clip: content-box;
-	background-position: center;
-	background-repeat: no-repeat;
-}
-
-.background-container:hover {
-	cursor: pointer;
-	animation-name: scale;
-	animation-duration: 1s;
-	animation-fill-mode: forwards;
-}
-
-@keyframes scale {
-	0% { transform: scale(1); }
-	100% { transform: scale(1.1); }
-}
-
-/* IDs for project-cards */
-
-#barbershop .background-container {
-	background-image: url("../img/barbershop-index-1100x755.jpg");
-}
-
-#sedona .background-container {
-	background-image: url("../img/sedona-index-1100x755.jpg");
-}
-
-#homeowners-association .background-container {
-	background-image: url("../img/HA-index.jpg");
-}
-
-#certificate .background-container {
-	background-image: url("../img/certificate.jpg");
 }
 
 /* side navigation-menu */
@@ -189,7 +70,7 @@ a {
 .hamburger {
   position: fixed;
   top: 0.7rem;
-  left: 1rem;
+  left: 1.5rem;
   margin: 0;
   padding: 0;
   width: 3rem;
@@ -260,11 +141,189 @@ a {
 	animation-duration: 1s;
 }
 
+/* main content */
+
+.main-content {
+	display: flex;
+	width: auto;
+	margin-left: 5rem;
+	align-items: inherit;
+	padding: 1rem;
+}
+
+.resume {
+
+}
+
+.about_me {
+	position: relative;
+	width: 30vw;
+	height: 96.6vh;
+	margin-right: 1rem;
+	background-image: url("../img/portrait_monochrome.jpg");
+	background-size: 100% auto;
+	background-color: black;
+	background-position: 0 -20%;
+	background-repeat: no-repeat;
+}
+
+.about_me p {
+	position: absolute;
+	bottom: 0;
+	padding: 2rem;
+	color: #fff;
+	line-height: 2rem;
+}
+
+.about_me a {
+	border-bottom: solid darkgray 0.1rem;
+}
+
+.about_me a:hover {
+	border-color: #fff;
+}
+
+.greeting {
+	font-size: 1.4rem;
+	line-height: 4rem;
+}
+
+.contacts {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 30vw;
+	height: 24.5vh;
+	margin: 1rem 0;
+	color: #fff;
+	background-color: rgb(72, 72, 72);
+}
+
+.shiny {
+	position: relative;
+	overflow: hidden;
+}
+
+.shiny::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  bottom: -50%;
+  left: -50%;
+  background: linear-gradient(to bottom, rgba(229, 172, 142, 0), rgba(255, 255, 255, 0.2) 50%, rgba(229, 172, 142, 0));
+  transform: rotateZ(60deg) translate(-30rem, 40rem);
+}
+
+.shiny:hover::before,
+.shiny:focus::before { 
+	animation: sheen 0.8s forwards;
+}
+
+@keyframes sheen {
+  100% { transform: rotateZ(60deg) translate(10rem, -35rem); }
+}
+
+.contacts a {
+	font-size: 1.7rem;
+}
+
+.portfolio {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-template-rows: auto auto 1fr;
+}
+
+.project-card {
+	position: relative;
+	width: 550px;
+	height: 377px;
+	margin: 0 1rem 1rem 0;
+	overflow: hidden;
+}
+
+.project-info {
+	position: absolute;
+	top: 60%;
+	left: 10%;
+	padding: 1rem;
+	color: rgb(72, 72, 72);
+	background-color: gray;
+}
+
+.project-info h3 {
+	margin: 0;
+	line-height: 2rem;
+}
+
+.background-container {
+	display: block;
+	width: inherit;
+	height: inherit;
+	background-color: #b3b6b7;
+	background-size: cover;
+	background-clip: content-box;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.background-container:hover {
+	cursor: pointer;
+	animation-name: scale;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes scale {
+	0% { transform: scale(1); }
+	100% { transform: scale(1.1); }
+}
+
+/* IDs for project-cards */
+
+#barbershop .background-container {
+	background-image: url("../img/barbershop-index-1100x755.jpg");
+}
+
+#sedona .background-container {
+	background-image: url("../img/sedona-index-1100x755.jpg");
+}
+
+#homeowners-association .background-container {
+	background-image: url("../img/HA-index.jpg");
+}
+
+#certificate .background-container {
+	background-image: url("../img/certificate.jpg");
+}
+
+#your_site .background-container {
+	position: relative;
+	background-image: url("../img/michael-payne-1076601-unsplash.jpg");
+}
+
+#your_site span {
+	display: block;
+	position: absolute;
+	bottom: 10%;
+	left: 10%;
+	width: auto;
+	height: auto;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	line-height: 2.3rem;
+	color: black;
+}
+
+#your_site span:hover {
+	cursor: pointer;
+}
+
 /* modal windows */
 /*curtain */
 
 .curtain {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	width: 100vw;
 	height: 100vh;
@@ -304,8 +363,8 @@ a {
 /* side-menu */
 
 nav.side-menu {
-	position: absolute;
-	width: 34.5vw;
+	position: fixed;
+	width: 35vw;
 	height: 100vh;
 	background-color: #fff;
 	z-index: 200;
