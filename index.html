@@ -27,7 +27,7 @@
             <h1 class="visually-hidden">Портфолио веб-верстальщика Дмитрия Антоненко</h1>
             <p>
               <span class="greeting">Приветствую!</span><br>
-              Меня зовут Дмитрий&nbspАнтóненко. Занимаюсь созданием сайтов: верстаю по&nbspготовым дизайнерским макетам (PSD&nbspto&nbspHTML), разрабатываю с&nbspнуля (ТЗ, дизайн, UX/UI). Технологии и&nbspнавыки: HTML5 (семантическая вёрстка, внутренняя оптимизация под&nbspпоисковые системы),  CSS3 (кроссбраузерная фиксированная, резиновая и&nbspадаптивная вёрстка), JS, LESS, Python. <a href="https://htmlacademy.ru/profile/id462599" target="_blank">Обучался</a> в&nbspHTML&nbspAcademy. Соизмеряю оплату работ с&nbspуровнем квалификации и&nbspопытом.
+              Меня зовут Дмитрий&nbspАнтóненко. Занимаюсь созданием сайтов: верстаю по&nbspготовым дизайнерским макетам (PSD&nbspto&nbspHTML), разрабатываю с&nbspнуля (ТЗ, дизайн, UX/UI). Технологии и&nbspнавыки: HTML5 (семантическая вёрстка, внутренняя оптимизация под&nbspпоисковые системы),  CSS3 (кроссбраузерная фиксированная, резиновая и&nbspадаптивная вёрстка), JS, LESS, Python. Обучался в&nbspHTML&nbspAcademy. Соизмеряю оплату работ с&nbspуровнем квалификации и&nbspопытом.
             </p>
           </div>
 
@@ -60,10 +60,16 @@
             <div class="background-container"></div>
             <span>Здесь<br>может быть<br>ваш сайт</span>
           </div>
-
-          <div class="project-card" id="placeholder">
-            <img src="https://placehold.it/550x377">
+          
+          <div class="project-card" id="this-site">
+            <div class="background-container"></div>
           </div>
+          
+          <!--
+          <div class="project-card" id="this-site">
+            <img src="./img/wiki.jpg" width="550px" height="377px">
+          </div>
+          -->
 
         </section>
       </section>
@@ -73,7 +79,7 @@
       <nav class="side-menu modal-hide">
         <li>
           <ul><a href="https://htmlacademy.ru/profile/id462599" target="_blank">Профиль в HTML Academy</a></ul>
-          <ul><a href="#">Немного личного</a></ul>
+          <ul><a href="some_personal.html">Немного личного</a></ul>
           <ul><a href="#">English version</a></ul>
         </li>
       </nav>
@@ -100,20 +106,28 @@
         <img src="./img/HA-index.jpg" width="1100px" height="755px">
         <figcaption>
           Товарищество собственников жилья «Южное»<br>
-          <a href="http://тсжюжное.рф">Постоянный адрес сайта: тсжюжное.рф</a>
+          <a href="http://тсжюжное.рф" target="_blank">Постоянный адрес сайта: тсжюжное.рф</a>
           <a href="https://github.com/DAntonenko/Homeowners-Association" target="_blank">Репозиторий проекта на GitHub</a>
         </figcaption>
       </figure>
 
       <figure class="popup popup-certificate">
-        <img src="./img/certificate.jpg" width="1100px" height="755px">
+        <img src="./img/certificate.jpg" width="538px" height="755px">
         <figcaption>
           Сертификат об успешном прохождении курса «Профессиональный HTML и CSS»<br>
           <a href="https://assets.htmlacademy.ru/certificates/intensive/67/462599.pdf" target="_blank">Смотреть на сайте HTML Academy</a>
         </figcaption>
       </figure>
 
+      <figure class="popup popup-this-site">
+        <img src="./img/this_site.jpg" width="1100px" height="755px">
+        <figcaption>
+          Этот сайт (рекурсия, да)<br>
+          <a href="https://github.com/DAntonenko/Portfolio" target="_blank">Репозиторий проекта на GitHub</a>
+        </figcaption>
+      </figure>
+
     </main>
-    <script src="js/modals.js"></script>
+    <script src="js/index-modals.js"></script>
   </body>
 </html>
