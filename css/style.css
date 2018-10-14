@@ -197,13 +197,13 @@ a {
 	display: grid;
 	grid-template-columns: auto 1fr;
 	grid-template-rows: auto auto 1fr;
+	grid-gap: 1rem 1rem;
 }
 
 .project-card {
 	position: relative;
 	width: 550px;
 	height: 377px;
-	margin: 0 1rem 1rem 0;
 	overflow: hidden;
 }
 
