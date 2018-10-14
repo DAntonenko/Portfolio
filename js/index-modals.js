@@ -3,7 +3,7 @@ var curtain = document.querySelector(".curtain");
 var sideMenu = document.querySelector(".side-menu");
 
 var projectCards = document.querySelectorAll(".project-card");
-var popups = document.querySelectorAll(".popup");
+var photoCanvases = document.querySelectorAll(".photo-canvas");
 
 var projectCardBarbersop = document.getElementById("barbershop");
 var projectCardSedona = document.getElementById("sedona");
@@ -11,36 +11,19 @@ var projectCardHomeownersAssociation = document.getElementById("homeowners-assoc
 var projectCardCertificate = document.getElementById("certificate");
 var projectCardThisSite = document.getElementById("this-site");
 
-var popupBarbersop = document.querySelector(".popup-barbershop");
-var popupSedona = document.querySelector(".popup-sedona");
-var popupHomeownersAssociation = document.querySelector(".popup-homeowners_association");
-var popupCertificate = document.querySelector(".popup-certificate");
-var popupThisSite = document.querySelector(".popup-this-site");
+var popupBarbersop = document.getElementById("popup-barbershop");
+var popupSedona = document.getElementById("popup-sedona");
+var popupHomeownersAssociation = document.getElementById("popup-homeowners_association");
+var popupCertificate = document.getElementById("popup-certificate");
+var popupThisSite = document.getElementById("popup-this-site");
 
-var previewUniver = document.getElementById("preview-univer");
-var previewWinners = document.getElementById("preview-winners");
-var previewPotter = document.getElementById("preview-potter");
-var previewLecturer = document.getElementById("preview-lecturer");
-var previewYahtFront = document.getElementById("preview-yaht_front");
-var previewYahtSideways = document.getElementById("preview-yaht_sideways");
-var previewMermaid = document.getElementById("preview-mermaid");
-var previewViruRAba = document.getElementById("preview-viru_raba");
-var previewSaareTirp = document.getElementById("preview-saare_tirp");
-
-var photoUniver = document.getElementById("photo-univer");
-var photoWinners = document.getElementById("photo-winners");
-var photoPotter = document.getElementById("photo-potter");
-var photoLecturer = document.getElementById("photo-lecturer");
-var photoYahtFront = document.getElementById("photo-yaht_front");
-var photoYahtSideways = document.getElementById("photo-yaht_sideways");
-var photoMermaid = document.getElementById("photo-mermaid");
-var photoViruRAba = document.getElementById("photo-viru_raba");
-var photoSaareTirp = document.getElementById("photo-saare_tirp");
+/* hamburger events */
 
 hamburger.addEventListener("click", function(evt) {
 	evt.preventDefault();
 	sideMenu.classList.toggle("modal-hide");
-
+	curtain.classList.toggle("modal-hide");
+/*	
 	if (curtain.classList.contains("modal-show")) {
 		curtain.classList.remove("modal-show");
 		curtain.classList.add("modal-hide");
@@ -53,7 +36,7 @@ hamburger.addEventListener("click", function(evt) {
 	popups.forEach(function(elem) {
     elem.classList.remove("popup-show");
 		});
-/*
+
 	if (curtain.classList.contains("modal-show")) {
 		curtain.classList.add("modal-hide");
 		curtain.classList.remove("curtain-close");
@@ -84,12 +67,11 @@ hamburger.addEventListener("click", function(evt) {
 window.addEventListener("keydown", function(evt) {
 	if (evt.keyCode === 27) {
 		evt.preventDefault();
-		curtain.classList.remove("modal-show");
 		curtain.classList.add("modal-hide");
 		sideMenu.classList.add("modal-hide");
 
-		popups.forEach(function(elem) {
-    elem.classList.remove("popup-show");
+		photoCanvases.forEach(function(elem) {
+    elem.classList.add("modal-hide");
 		});
 	}
 });
@@ -98,53 +80,47 @@ window.addEventListener("keydown", function(evt) {
 
 curtain.addEventListener("click", function(evt) {
 		evt.preventDefault();
-		curtain.classList.remove("modal-show");
 		curtain.classList.add("modal-hide");
 		sideMenu.classList.add("modal-hide");
-
-		popups.forEach(function(elem) {
-    elem.classList.remove("popup-show");
-  	});
 });
 
 /* popup events */
 
+photoCanvases.forEach(function(elem) {
+	elem.addEventListener("click", function(evt) {
+		evt.preventDefault();
+		elem.classList.add("modal-hide");
+	});
+});
+
 projectCards.forEach(function(elem) {
 	elem.addEventListener("click", function(evt) {
 		evt.preventDefault();
-		curtain.classList.remove("modal-hide");
+		/*curtain.classList.remove("modal-hide");*/
 	});
 });
 
 projectCardBarbersop.addEventListener("click", function(evt) {
 	evt.preventDefault();
-	popupBarbersop.classList.add("popup-show");
+	popupBarbersop.classList.remove("modal-hide");
 });
 
 projectCardSedona.addEventListener("click", function(evt) {
 	evt.preventDefault();
-	popupSedona.classList.add("popup-show");
+	popupSedona.classList.remove("modal-hide");
 });
 
 projectCardHomeownersAssociation.addEventListener("click", function(evt) {
 	evt.preventDefault();
-	popupHomeownersAssociation.classList.add("popup-show");
+	popupHomeownersAssociation.classList.remove("modal-hide");
 });
 
 projectCardCertificate.addEventListener("click", function(evt) {
 	evt.preventDefault();
-	popupCertificate.classList.add("popup-show");
+	popupCertificate.classList.remove("modal-hide");
 });
 
 projectCardThisSite.addEventListener("click", function(evt) {
 	evt.preventDefault();
-	popupThisSite.classList.add("popup-show");
-});
-
-/* photo gallery events */
-
-previewUniver.addEventListener("click", function(evt) {
-	console.log("jah!")
-	evt.preventDefault();
-	photoUniver.classList.remove("modal-hide");
+	popupThisSite.classList.remove("modal-hide");
 });

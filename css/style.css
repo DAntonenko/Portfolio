@@ -207,6 +207,10 @@ a {
 	overflow: hidden;
 }
 
+.too-light {
+	border: solid 0.07rem silver;
+}
+
 .project-card a {
 	width: inherit;
 }
@@ -234,6 +238,22 @@ a {
 	100% { transform: scale(1.1); }
 }
 
+#your_site span {
+	display: block;
+	position: absolute;
+	bottom: 20%;
+	right: 15%;
+	width: auto;
+	height: auto;
+	font-size: 2rem;
+	line-height: 2.5rem;
+	color: rgb(72, 72, 72);
+}
+
+#your_site span:hover {
+	cursor: pointer;
+}
+
 .project-info {
 	position: absolute;
 	top: 60%;
@@ -246,68 +266,6 @@ a {
 .project-info h3 {
 	margin: 0;
 	line-height: 2rem;
-}
-/*
-.background-container {
-	display: block;
-	width: inherit;
-	height: inherit;
-	background-color: #b3b6b7;
-	background-size: cover;
-	background-clip: content-box;
-	background-position: center;
-	background-repeat: no-repeat;
-}
-
-.background-container:hover {
-	cursor: pointer;
-	animation-name: scale;
-	animation-duration: 1s;
-	animation-fill-mode: forwards;
-}
-*/
-/* IDs for project-cards */
-
-#barbershop .background-container {
-	background-image: url("../img/barbershop-index-1100x755.jpg");
-}
-
-#sedona .background-container {
-	background-image: url("../img/sedona-index-1100x755.jpg");
-}
-
-#homeowners-association .background-container {
-	background-image: url("../img/HA-index.jpg");
-}
-
-#certificate .background-container {
-	background-image: url("../img/certificate.jpg");
-}
-
-#your_site .background-container {
-	position: relative;
-	background-image: url("../img/michael-payne-1076601-unsplash.jpg");
-}
-
-#your_site span {
-	display: block;
-	position: absolute;
-	bottom: 10%;
-	left: 10%;
-	width: auto;
-	height: auto;
-	text-transform: uppercase;
-	font-size: 1.5rem;
-	line-height: 2.3rem;
-	color: black;
-}
-
-#your_site span:hover {
-	cursor: pointer;
-}
-
-#this-site .background-container {
-	background-image: url("../img/this_site.jpg");
 }
 
 /* footer */
@@ -430,7 +388,7 @@ a {
 	left: 0;
 	width: 100vw;
 	height: 100vh;
-	background-color: rgba(0, 0, 0, 0.8);
+	background-color: rgba(0, 0, 0, 0.9);
 	z-index: 500;
 }
 
@@ -440,6 +398,11 @@ a {
 }
 
 /* modal windows */
+
+.modal-hide {
+	display: none;
+}
+
 /*curtain */
 
 .curtain {
@@ -450,14 +413,6 @@ a {
 	background-color: #000;
 	opacity: 0.7;
 	z-index: 100;
-}
-
-.modal-hide {
-	display: none;
-}
-
-.modal-show {
-	display: block;
 }
 
 @keyframes curtain-open {
@@ -507,30 +462,30 @@ nav.side-menu {
 /* popup windows for seltcted content */
 
 .popup {
-	display: none;
 	position: fixed;
 	width: 1100px;
-	height: 830px;
+	height: 95vh;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
 	margin: auto;
 	z-index: 500;
-	background-color: #fff;
-	outline: solid #fff 1rem;
+	color: #fff;
+	line-height: 2.7rem;
+	background-color: rgb(72, 72, 72);
 	text-align: center;
 }
 
+.popup figcaption {
+	padding-left: 1rem;
+	text-align: left;
+}
+
 .popup a {
-	border-bottom: solid darkgray 0.1rem;
+	border-bottom: solid #fff 0.1rem;
 }
 
 .popup a:hover {
-	color: #000;
-	border-bottom: solid #000 0.1rem;
-}
-
-.popup-show {
-	display: block;
+	border-bottom: solid #800000 0.1rem;
 }
