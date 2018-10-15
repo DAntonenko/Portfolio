@@ -59,7 +59,7 @@ a {
 .side-column {
 	display: block;
 	position: fixed;
-	width: 5rem;
+	width: 6rem;
 	height: 100vh;
 	background-color: #fff;
 	z-index: 300;
@@ -166,6 +166,7 @@ a {
 	width: inherit;
 	height: inherit;
 	background-image: url("../img/portrait_monochrome.jpg");
+	background-origin: content-box;
 	background-size: 100% auto;
 	background-color: black;
 	background-position: 0 -20%;
@@ -439,7 +440,9 @@ a {
 
 nav.side-menu {
 	position: fixed;
-	width: 35vw;
+	top: 0;
+	left: 6rem;
+	width: 30vw;
 	height: 100vh;
 	background-color: #fff;
 	z-index: 200;
@@ -488,4 +491,22 @@ nav.side-menu {
 
 .popup a:hover {
 	border-bottom: solid #800000 0.1rem;
+}
+
+/* adaptive */
+
+@media (max-width: 1824px) and (min-width: 1600px) {
+
+	.resume {
+		width: 30vw;
+	}
+
+	.project-card {
+		width: 500px;
+		height: 377px;
+	}
+
+	.side-column {
+		background-color: red;
+	}
 }
