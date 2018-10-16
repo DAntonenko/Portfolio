@@ -88,7 +88,7 @@ curtain.addEventListener("click", function(evt) {
 
 photoCanvases.forEach(function(elem) {
 	elem.addEventListener("click", function(evt) {
-		evt.preventDefault();
+		/* evt.preventDefault(); */
 		elem.classList.add("modal-hide");
 	});
 });
@@ -96,7 +96,7 @@ photoCanvases.forEach(function(elem) {
 projectCards.forEach(function(elem) {
 	elem.addEventListener("click", function(evt) {
 		evt.preventDefault();
-		/*curtain.classList.remove("modal-hide");*/
+		/* curtain.classList.remove("modal-hide"); */
 	});
 });
 

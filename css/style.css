@@ -307,7 +307,7 @@ a {
   bottom: -50%;
   left: -50%;
   background: linear-gradient(to bottom, rgba(229, 172, 142, 0), rgba(255, 255, 255, 0.2) 50%, rgba(229, 172, 142, 0));
-  transform: rotateZ(60deg) translate(-30rem, 50rem);
+  transform: rotateZ(180deg) translate(-30rem, 50rem);
 }
 
 .shiny:hover::before,
@@ -449,13 +449,17 @@ nav.side-menu {
 }
 
 .side-menu li {
-	margin-left: 6vw;
+	margin-left: 5%;
 	margin-top: 50%;
 	text-transform: uppercase;
 	font-size: 1.7rem;
 	font-weight: bolder;
 	letter-spacing: 0.01rem;
 	word-spacing: 0.3rem;
+}
+
+.side-menu ul {
+	padding: 0;
 }
 
 .side-menu ul:hover {
@@ -474,15 +478,16 @@ nav.side-menu {
 	left: 0;
 	margin: auto;
 	z-index: 500;
-	color: #fff;
-	line-height: 2.7rem;
-	background-color: rgb(72, 72, 72);
 	text-align: center;
+	outline: solid #fff 0.1rem;
+	background-color: #000;
 }
 
 .popup figcaption {
 	padding-left: 1rem;
 	text-align: left;
+	color: silver;
+	line-height: 2.7rem;
 }
 
 .popup a {
@@ -497,16 +502,159 @@ nav.side-menu {
 
 @media (max-width: 1824px) and (min-width: 1600px) {
 
-	.resume {
-		width: 30vw;
+	.project-card {
+		width: 458px;
+		height: 314px;
 	}
 
+	#your_site span {
+		font-size: 1.7rem;
+		line-height: 2rem;
+	}
+
+	.contacts {
+		line-height: 3.5rem;
+	}
+
+	.contacts a:first-child {
+		font-size: 1.7rem;
+	}
+
+	.contacts a:nth-child(2) {
+		font-size: 1.6rem;
+	}
+
+	.popup figcaption {
+		line-height: 2.3rem;
+	}
+}
+
+@media (max-width: 1599px) and (min-width: 1430px) {
+
 	.project-card {
-		width: 500px;
-		height: 377px;
+		width: 393px;
+		height: 269px;
+	}
+
+	.resume p {
+		font-size: 0.9rem;
+		line-height: 1.8rem;
+	}
+
+	#your_site span {
+		font-size: 1.4rem;
+		line-height: 1.9rem;
+	}
+
+	.contacts {
+		line-height: 3.3rem;
+	}
+
+	.contacts a:first-child {
+		font-size: 1.5rem;
+	}
+
+	.contacts a:nth-child(2) {
+		font-size: 1.4rem;
+	}
+
+	.popup {
+		width: 900px;
+	}
+
+	#popup-certificate img {
+		height: 640px;
+		width: auto;
+	}
+
+	.popup img {
+		width: inherit;
+		height: auto;
+	}
+
+	.popup figcaption {
+		font-size: 1rem;
+		line-height: 2rem;
+	}
+}
+
+@media (max-width: 1429px) and (min-width: 1024px) {
+
+	.main-content {
+		margin-left: 0;
 	}
 
 	.side-column {
-		background-color: red;
+		background-color: transparent;
+	}
+
+	.hamburger {
+		top: 1.5rem;
+		left: 2rem;
+	}
+
+	.hamburger-line_middle {
+		height: 11%;
+	}
+
+	nav.side-menu {
+		left: 0;
+		width: 41.6vw;
+	}
+
+	.side-menu li {
+		margin-left: 2rem;
+	}
+
+	.project-card {
+		width: 262px;
+		height: 180px;
+	}
+
+	.resume {
+		width: 40vw;
+		height: 95vh;
+	}
+
+	.resume p {
+		font-size: 0.9rem;
+		line-height: 1.6rem;
+	}
+
+	#your_site span {
+		font-size: 1rem;
+		line-height: 1.3rem;
+	}
+
+	.contacts {
+		height: 18.5vh;
+		line-height: 2.5rem;
+	}
+
+	.contacts a:first-child {
+		font-size: 1.3rem;
+	}
+
+	.contacts a:nth-child(2) {
+		font-size: 1.1rem;
+	}
+
+	.popup {
+		width: 900px;
+	}
+
+	#popup-certificate img {
+		height: 640px;
+		width: auto;
+	}
+
+	.popup img {
+		width: inherit;
+		height: auto;
+	}
+
+	.popup figcaption {
+		font-size: 1rem;
+		line-height: 2rem;
 	}
 }
