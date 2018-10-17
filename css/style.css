@@ -654,7 +654,279 @@ nav.side-menu {
 	}
 
 	.popup figcaption {
+		font-size: 0.9rem;
+		line-height: 1.7rem;
+	}
+}
+
+@media (max-width: 1023px) and (min-width: 375px) {
+
+	body {
+		overflow-x: hidden;
+	  margin-right: calc(-1 * (100vw - 100%));
+	}
+
+/* index adaptive */
+
+	.main-content {
+		display: block;
+		width: 100vw;
+		margin-left: 0;
+		margin-right: auto;
+		padding: 0;
+	}
+
+	.side-column {
+		position: relative;
+		width: 0;
+		background-color: transparent;
+	}
+
+	.hamburger {
+		position: absolute;
+		top: 1.5rem;
+		left: 2rem;
+	}
+
+	.hamburger-line_middle {
+		height: 11%;
+	}
+
+	nav.side-menu {
+		left: 0;
+		width: 100vw;
+	}
+
+	.side-menu li {
+		margin-left: 2rem;
+	}
+
+	.resume {
+		width: inherit;
+		height: 100vh;
+		margin-right: 0;
+	}
+
+	.about_me {
+		position: relative;
+		top: 0;
+		left: 0;
+	}
+
+	.resume p {
+		padding-bottom: 0;
+		font-size: 0.8rem;
+		line-height: 1.5rem;
+	}
+
+	.portfolio {
+		display: block;
+	}
+
+	.project-card {
+		width: 100vw;
+		height: 68vw;
+		margin-top: 1rem;
+	}
+
+	#your_site span {
+		font-size: 1rem;
+		line-height: 1.3rem;
+	}
+
+	.contacts {
+		width: 100vw;
+		height: 18.5vh;
+		line-height: 2.5rem;
+	}
+
+	.contacts a:first-child {
+		font-size: 1.2rem;
+	}
+
+	.contacts a:nth-child(2) {
+		font-size: 1rem;
+	}
+
+	.photo-canvas {
+		background-color: #000;
+	}
+
+	.popup {
+		width: 100vw;
+		outline: none;
+	}
+
+	#popup-certificate img {
+		width: 75vw;
+		height: auto;
+	}
+
+	.popup img {
+		width: inherit;
+		height: auto;
+	}
+
+	.popup figcaption {
 		font-size: 1rem;
 		line-height: 2rem;
+	}
+
+/* personal adaptive */
+
+	.personal-main {
+		flex-direction: column;
+	}
+
+	.personal-main .side-column {
+		width: 100vw;
+		height: 6rem;
+	}
+
+	.preview-area {
+		display: block;
+		margin: 0;
+		padding: 0;
+	}
+
+	.photo-preview {
+		width: 100vw;
+		height: auto;
+	}
+}
+
+@media (max-width: 374px) and (min-width: 320px) {
+
+	body {
+		overflow-x: hidden;
+	  margin-right: calc(-1 * (100vw - 100%));
+	}
+
+/* index adaptive */
+
+	.main-content {
+		display: block;
+		width: 100vw;
+		margin-left: 0;
+		margin-right: auto;
+		padding: 0;
+	}
+
+	.side-column {
+		position: relative;
+		width: 0;
+		background-color: transparent;
+	}
+
+	.hamburger {
+		position: absolute;
+		top: 1.5rem;
+		left: 2rem;
+	}
+
+	.hamburger-line_middle {
+		height: 11%;
+	}
+
+	nav.side-menu {
+		left: 0;
+		width: 100vw;
+	}
+
+	.side-menu li {
+		margin-left: 2rem;
+	}
+
+	.resume {
+		width: inherit;
+		height: 100vh;
+		margin-right: 0;
+	}
+
+	.about_me {
+		position: relative;
+		top: 0;
+		left: 0;
+	}
+
+	.resume p {
+		padding-bottom: 0;
+		font-size: 0.6rem;
+		line-height: 1.4rem;
+	}
+
+	.portfolio {
+		display: block;
+	}
+
+	.project-card {
+		width: 100vw;
+		height: 68vw;
+		margin-top: 1rem;
+	}
+
+	#your_site span {
+		font-size: 1rem;
+		line-height: 1.3rem;
+	}
+
+	.contacts {
+		width: 100vw;
+		height: 18.5vh;
+		line-height: 2.5rem;
+	}
+
+	.contacts a:first-child {
+		font-size: 1.2rem;
+	}
+
+	.contacts a:nth-child(2) {
+		font-size: 1rem;
+	}
+
+	.photo-canvas {
+		background-color: #000;
+	}
+
+	.popup {
+		width: 100vw;
+		outline: none;
+	}
+
+	#popup-certificate img {
+		width: 75vw;
+		height: auto;
+	}
+
+	.popup img {
+		width: inherit;
+		height: auto;
+	}
+
+	.popup figcaption {
+		font-size: 1rem;
+		line-height: 2rem;
+	}
+
+/* personal adaptive */
+
+	.personal-main {
+		flex-direction: column;
+	}
+
+	.personal-main .side-column {
+		width: 100vw;
+		height: 6rem;
+	}
+
+	.preview-area {
+		display: block;
+		margin: 0;
+		padding: 0;
+	}
+
+	.photo-preview {
+		width: 100vw;
+		height: auto;
 	}
 }
