@@ -738,6 +738,7 @@ nav.side-menu {
 		width: 100vw;
 		height: 18.5vh;
 		line-height: 2.5rem;
+		margin-top: 1rem;
 	}
 
 	.contacts a:first-child {
@@ -874,6 +875,7 @@ nav.side-menu {
 		width: 100vw;
 		height: 18.5vh;
 		line-height: 2.5rem;
+		margin-top: 1rem;
 	}
 
 	.contacts a:first-child {
