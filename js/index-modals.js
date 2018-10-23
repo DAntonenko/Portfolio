@@ -23,43 +23,6 @@ hamburger.addEventListener("click", function(evt) {
 	evt.preventDefault();
 	sideMenu.classList.toggle("modal-hide");
 	curtain.classList.toggle("modal-hide");
-/*	
-	if (curtain.classList.contains("modal-show")) {
-		curtain.classList.remove("modal-show");
-		curtain.classList.add("modal-hide");
-	} 
-	else {
-		curtain.classList.add("modal-show");
-		curtain.classList.remove("modal-hide");
-	};
-
-	popups.forEach(function(elem) {
-    elem.classList.remove("popup-show");
-		});
-
-	if (curtain.classList.contains("modal-show")) {
-		curtain.classList.add("modal-hide");
-		curtain.classList.remove("curtain-close");
-		curtain.classList.remove("modal-show");
-	} 
-	else {
-		curtain.classList.add("curtain-close");
-		curtain.classList.remove("curtain-open");
-		curtain.classList.add("modal-show");
-		hamburgerLineUpper.classList.add("line-down");
-	};
-
-	if (sideMenu.classList.contains("curtain-close")) {
-		sideMenu.classList.add("curtain-open");
-		sideMenu.classList.remove("curtain-close");
-		sideMenu.classList.remove("modal-show");
-	} 
-	else {
-		sideMenu.classList.add("curtain-close");
-		sideMenu.classList.remove("curtain-open");
-		sideMenu.classList.add("modal-show");
-	};
-	*/
 });
 
 /* escape events */
@@ -74,6 +37,40 @@ window.addEventListener("keydown", function(evt) {
     elem.classList.add("modal-hide");
 		});
 	}
+});
+
+/* backKeyDown events */
+
+/* crutch 
+window.addEventListener('beforeunload', function (evt) {
+  // Cancel the event as stated by the standard.
+  evt.preventDefault();
+  // Chrome requires returnValue to be set.
+  evt.returnValue = '';
+  curtain.classList.add("modal-hide");
+	sideMenu.classList.add("modal-hide");
+
+	photoCanvases.forEach(function(elem) {
+  elem.classList.add("modal-hide");
+	});
+});*/
+
+/* with little help of Krkma */
+
+history.pushState({}, '', window.location.href);
+function listener () {
+	window.removeEventListener('popstate', listener);
+	//history.back();
+}
+
+window.addEventListener('popstate', function() {
+	console.log("jah!")
+	curtain.classList.add("modal-hide");
+	sideMenu.classList.add("modal-hide");
+
+	photoCanvases.forEach(function(elem) {
+  elem.classList.add("modal-hide");
+	});
 });
 
 /* curtain click events */

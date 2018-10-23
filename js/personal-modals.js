@@ -47,6 +47,40 @@ window.addEventListener("keydown", function(evt) {
 	}
 });
 
+/* backKeyDown events */
+
+/* crutch 
+window.addEventListener('beforeunload', function (evt) {
+  // Cancel the event as stated by the standard.
+  evt.preventDefault();
+  // Chrome requires returnValue to be set.
+  evt.returnValue = '';
+  curtain.classList.add("modal-hide");
+	sideMenu.classList.add("modal-hide");
+
+	photoCanvases.forEach(function(elem) {
+  elem.classList.add("modal-hide");
+	});
+});*/
+
+/* with little help of Krkma */
+
+history.pushState({}, '', window.location.href);
+function listener () {
+	window.removeEventListener('popstate', listener);
+	//history.back();
+}
+
+window.addEventListener('popstate', function() {
+	console.log("jah!")
+	curtain.classList.add("modal-hide");
+	sideMenu.classList.add("modal-hide");
+
+	photoCanvases.forEach(function(elem) {
+  elem.classList.add("modal-hide");
+	});
+});
+
 /* curtain click events */
 
 curtain.addEventListener("click", function(evt) {
