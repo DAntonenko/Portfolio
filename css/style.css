@@ -448,7 +448,7 @@ nav.side-menu {
 	z-index: 200;
 }
 
-.side-menu li {
+.side-menu ul {
 	margin-left: 5%;
 	margin-top: 50%;
 	text-transform: uppercase;
@@ -458,11 +458,12 @@ nav.side-menu {
 	word-spacing: 0.3rem;
 }
 
-.side-menu ul {
+.side-menu li {
 	padding: 0;
+	margin: 2rem 0 2rem 0;
 }
 
-.side-menu ul:hover {
+.side-menu li:hover {
 	color: #000;
 }
 
